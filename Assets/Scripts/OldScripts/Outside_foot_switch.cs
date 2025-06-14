@@ -28,7 +28,7 @@ public class Outside_foot_switch : MonoBehaviour
     {
         RaycastHit hit;
 
-        if (Physics.Raycast(transform.position, Vector3.down, out hit, distToGround + 0.5f))
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, 1.1f))
         {
             if (hit.collider.CompareTag("Outside") && snapshotActivated == false)
             {
