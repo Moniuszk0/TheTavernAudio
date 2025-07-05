@@ -2744,7 +2744,7 @@ Transform:
   m_GameObject: {fileID: 613997984}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 400.45, y: 8.22, z: 308.22}
+  m_LocalPosition: {x: 400.28, y: 11.39, z: 311.64}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2985,7 +2985,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0a3acf8d75e1714f8433f67364d416a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 90
+  rotationSpeed: 155
+  doorsOpened: 1
   DoorsEvent:
     Guid:
       Data1: 133977326
@@ -5506,7 +5507,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1496167026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5536,8 +5537,8 @@ MonoBehaviour:
   NonRigidbodyVelocity: 0
   Params: []
   OverrideAttenuation: 1
-  OverrideMinDistance: 9
-  OverrideMaxDistance: 14
+  OverrideMinDistance: 9.5
+  OverrideMaxDistance: 11.7
 --- !u!135 &1496167027
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5645,7 +5646,7 @@ MonoBehaviour:
       Data4: 23351021
     Path: event:/tavern music
   Event: 
-  EventPlayTrigger: 0
+  EventPlayTrigger: 1
   EventStopTrigger: 0
   AllowFadeout: 1
   TriggerOnce: 0
@@ -5653,8 +5654,8 @@ MonoBehaviour:
   NonRigidbodyVelocity: 0
   Params: []
   OverrideAttenuation: 1
-  OverrideMinDistance: 9
-  OverrideMaxDistance: 11.579102
+  OverrideMinDistance: 9.5
+  OverrideMaxDistance: 11.7
 --- !u!1 &1528400724
 GameObject:
   m_ObjectHideFlags: 0
@@ -6071,7 +6072,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1602359162
 Transform:
   m_ObjectHideFlags: 0
@@ -7283,7 +7284,7 @@ MonoBehaviour:
       Data4: -69770941
     Path: event:/fireplace
   Event: 
-  EventPlayTrigger: 0
+  EventPlayTrigger: 1
   EventStopTrigger: 0
   AllowFadeout: 1
   TriggerOnce: 0

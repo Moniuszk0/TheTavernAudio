@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class Doors : MonoBehaviour, IInteractable
 {
     public float rotationSpeed = 90f; // Degrees per second
-    bool doorsOpened = true;
+    public bool doorsOpened = true;
     bool isRotating = false;
 
     ////////////////// FMOD Section ///////////////////
@@ -48,6 +48,9 @@ public class Doors : MonoBehaviour, IInteractable
         // Ensure the rotation is exactly what we want at the end
         transform.rotation = targetRotation;
         isRotating = false;
+        DoorsSound.setParameterByNameWithLabel("Doors", "Closed");
+        DoorsSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
+        DoorsSound.start();
     }
 
     IEnumerator OpenOverTime()
@@ -71,7 +74,7 @@ public class Doors : MonoBehaviour, IInteractable
 
     void PlaySound()
     {
-        if (doorsOpened == true)
+        if (doorsOpened)
         {            
             DoorsSound = FMODUnity.RuntimeManager.CreateInstance(DoorsEvent);
             DoorsSound.setParameterByNameWithLabel("Doors", "Close");

@@ -55,7 +55,34 @@ MonoBehaviour:
   - {fileID: -128605427734224982}
   MinDistance: 1
   MaxDistance: 20
-  Length: 1375
+  Length: 625
+--- !u!114 &-5354504802872127903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/insideRoomSnap
+  m_EditorClassIdentifier: 
+  Path: snapshot:/insideRoomSnap
+  Guid:
+    Data1: -1860816867
+    Data2: 1118260124
+    Data3: 1253354675
+    Data4: -600245169
+  Banks:
+  - {fileID: 6555669204201430755}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-5283204761845054802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,10 +178,10 @@ MonoBehaviour:
   Path: ../../../Desktop/projekt1/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638855013289348740
+  lastModified: 638873156395923245
   FileSizes:
   - Name: Desktop
-    Value: 1280
+    Value: 1330
   Exists: 1
 --- !u!114 &-1729940313866100856
 MonoBehaviour:
@@ -193,12 +220,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/doors/doors state
+  m_Name: parameter:/doors/Doors
   m_EditorClassIdentifier: 
-  Name: doors state
+  Name: Doors
   StudioPath: 
   Min: 0
-  Max: 1
+  Max: 2
   Default: 0
   ID:
     data1: 728828645
@@ -206,8 +233,9 @@ MonoBehaviour:
   Type: 2
   IsGlobal: 0
   Labels:
-  - open
-  - close
+  - Open
+  - Close
+  - Closed
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -232,12 +260,13 @@ MonoBehaviour:
   - {fileID: 2598583428189212790}
   - {fileID: -1729940313866100856}
   - {fileID: -7037346678970915760}
+  - {fileID: -5354504802872127903}
   EditorParameters: []
   MasterBanks:
   - {fileID: 6555669204201430755}
   StringsBanks:
   - {fileID: -1901548412970075241}
-  cacheTime: 638855013289348740
+  cacheTime: 638873156395923245
   cacheVersion: 131624
 --- !u!114 &2598583428189212790
 MonoBehaviour:
@@ -281,10 +310,10 @@ MonoBehaviour:
   Path: ../../../Desktop/projekt1/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638855013289338721
+  lastModified: 638873156395913250
   FileSizes:
   - Name: Desktop
-    Value: 6135168
+    Value: 6137984
   Exists: 1
 --- !u!114 &8506364180563857265
 MonoBehaviour:
