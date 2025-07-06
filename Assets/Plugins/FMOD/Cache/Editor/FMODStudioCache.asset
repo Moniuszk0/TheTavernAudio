@@ -28,6 +28,32 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 324
+--- !u!114 &-7746171665562839005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/jumping/Footsteps_surface
+  m_EditorClassIdentifier: 
+  Name: Footsteps_surface
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3672882699
+    data2: 3378325506
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Stone
+  - Wood
+  Exists: 1
 --- !u!114 &-7037346678970915760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56,6 +82,32 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 625
+--- !u!114 &-6301524834747270481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/landing/Footsteps_surface
+  m_EditorClassIdentifier: 
+  Name: Footsteps_surface
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3672882699
+    data2: 3378325506
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Stone
+  - Wood
+  Exists: 1
 --- !u!114 &-5354504802872127903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,6 +215,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 51000
+--- !u!114 &-2027218216619784083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/Health
+  m_EditorClassIdentifier: 
+  Path: snapshot:/Health
+  Guid:
+    Data1: 54038659
+    Data2: 1335515454
+    Data3: 975186588
+    Data4: 1765802352
+  Banks:
+  - {fileID: 6555669204201430755}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-1901548412970075241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,10 +257,10 @@ MonoBehaviour:
   Path: ../../../Desktop/projekt1/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638873156395923245
+  lastModified: 638874000672822779
   FileSizes:
   - Name: Desktop
-    Value: 1330
+    Value: 1682
   Exists: 1
 --- !u!114 &-1729940313866100856
 MonoBehaviour:
@@ -210,6 +289,34 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-133951792717077593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/jumping
+  m_EditorClassIdentifier: 
+  Path: event:/jumping
+  Guid:
+    Data1: 1873817586
+    Data2: 1216271555
+    Data3: -1227790973
+    Data4: 632468209
+  Banks:
+  - {fileID: 6555669204201430755}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -7746171665562839005}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 324
 --- !u!114 &-128605427734224982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -261,12 +368,15 @@ MonoBehaviour:
   - {fileID: -1729940313866100856}
   - {fileID: -7037346678970915760}
   - {fileID: -5354504802872127903}
+  - {fileID: -2027218216619784083}
+  - {fileID: 8583882569605969158}
+  - {fileID: -133951792717077593}
   EditorParameters: []
   MasterBanks:
   - {fileID: 6555669204201430755}
   StringsBanks:
   - {fileID: -1901548412970075241}
-  cacheTime: 638873156395923245
+  cacheTime: 638874000672822779
   cacheVersion: 131624
 --- !u!114 &2598583428189212790
 MonoBehaviour:
@@ -310,10 +420,10 @@ MonoBehaviour:
   Path: ../../../Desktop/projekt1/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638873156395913250
+  lastModified: 638874000672802731
   FileSizes:
   - Name: Desktop
-    Value: 6137984
+    Value: 6152160
   Exists: 1
 --- !u!114 &8506364180563857265
 MonoBehaviour:
@@ -342,3 +452,31 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 77538
+--- !u!114 &8583882569605969158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/landing
+  m_EditorClassIdentifier: 
+  Path: event:/landing
+  Guid:
+    Data1: 799090725
+    Data2: 1193168735
+    Data3: 2113602702
+    Data4: 1978568744
+  Banks:
+  - {fileID: 6555669204201430755}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -6301524834747270481}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 324

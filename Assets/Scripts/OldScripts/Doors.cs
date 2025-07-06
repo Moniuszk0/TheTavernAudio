@@ -21,6 +21,8 @@ public class Doors : MonoBehaviour, IInteractable
     FMOD.Studio.EventInstance InsideRoom;
     public EventReference insideRoomSnap;
 
+    public bool ambientActivated;
+
     ////////////////// FMOD Section End ///////////////////
 
     public void Interact()
@@ -51,10 +53,13 @@ public class Doors : MonoBehaviour, IInteractable
         DoorsSound.setParameterByNameWithLabel("Doors", "Closed");
         DoorsSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
         DoorsSound.start();
+        doorsOpened = false;
+        RoomsSnap();
     }
 
     IEnumerator OpenOverTime()
     {
+        
         isRotating = true;
         float elapsedTime = 0f;
         Quaternion startRotation = transform.rotation;
@@ -70,6 +75,7 @@ public class Doors : MonoBehaviour, IInteractable
         // Ensure the rotation is exactly what we want at the end
         transform.rotation = targetRotation;
         isRotating = false;
+        
     }
 
     void PlaySound()
@@ -92,9 +98,9 @@ public class Doors : MonoBehaviour, IInteractable
 
     void RoomsSnap()
     {
-        RoomAmbient roomAmbient = FindObjectOfType<RoomAmbient>();
+        
 
-        if (roomAmbient.ambientActivated == true && doorsOpened == false)
+        if (ambientActivated && doorsOpened == false)
         {
             Debug.Log("im in!");
             InsideRoom = FMODUnity.RuntimeManager.CreateInstance(insideRoomSnap);
@@ -102,7 +108,7 @@ public class Doors : MonoBehaviour, IInteractable
         }
         else
         {
-            if (roomAmbient.ambientActivated == true && doorsOpened == true)
+            if (ambientActivated && doorsOpened)
             {
                 Debug.Log("it works");
                 InsideRoom.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
@@ -115,19 +121,27 @@ public class Doors : MonoBehaviour, IInteractable
     {
         if (doorsOpened == true)
         {
+            
             StartCoroutine(CloseOverTime());
             PlaySound();
-            doorsOpened = false;
-            RoomsSnap();
+            
+            
         }
         else
         {
+            
+            doorsOpened = true;
+            RoomsSnap();
+            doorsOpened = false;
             StartCoroutine(OpenOverTime());
             PlaySound();
             doorsOpened = true;
-            RoomsSnap();
+            
         }
     }
+
+    
+    
 }
 
 

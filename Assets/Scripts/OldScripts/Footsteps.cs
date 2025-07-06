@@ -124,7 +124,7 @@ public class Footsteps : MonoBehaviour
             if (IsGrounded())
             {
                 RaycastHit hit;
-                if (Physics.Raycast(transform.position, Vector3.down, out hit, distToGround + 0.5f))
+                if (Physics.Raycast(transform.position, Vector3.down, out hit, distToGround + 1.1f))
                 {
                     //Debug.Log(hit.collider.tag);
                     if (hit.collider.CompareTag("Stone"))
@@ -184,7 +184,7 @@ public class Footsteps : MonoBehaviour
                 LandSound = FMODUnity.RuntimeManager.CreateInstance(landEvent);
                 RaycastHit hit;
 
-                if (Physics.Raycast(transform.position, Vector3.down, out hit, distToGround + 0.5f))
+                if (Physics.Raycast(transform.position, Vector3.down, out hit, distToGround + 1.1f))
                 {
                     //Debug.Log("Hit object tag: " + hit.collider.tag);
                     if (hit.collider.CompareTag("Stone"))
@@ -228,6 +228,6 @@ public class Footsteps : MonoBehaviour
 
     bool IsGrounded()
     {
-        return Physics.Raycast(transform.position, Vector3.down, distToGround + 0.5f);
+        return Physics.Raycast(transform.position, Vector3.down, distToGround + 1.1f);
     }  
 }
